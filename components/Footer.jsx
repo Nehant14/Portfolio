@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react'
+import githubimage from "../assets/github.png"
+import linkedinimage from "../assets/linkedin.png"
+import instagramimage from "../assets/instagram.png"
+import emailimage from "../assets/gmail.png"
 
 const SOCIAL_LINKS = [
-    { id: 1, label: 'GitHub', href: 'https://github.com/Nehant14', icon: '/assets/github.png' },
-    { id: 2, label: 'LinkedIn', href: 'https://www.linkedin.com/in/nehant-fopse-147082324', icon: '/assets/linkedin.png' },
-    { id: 3, label: 'Instagram', href: 'https://www.instagram.com/nehant_sf', icon: '/assets/instagram.png' },
-    { id: 4, label: 'Email', href: 'mailto:nehantfopse@gmail.com', icon: '/assets/gmail.png' },
+    { id: 1, label: 'GitHub', href: 'https://github.com/Nehant14', icon: githubimage },
+    { id: 2, label: 'LinkedIn', href: 'https://www.linkedin.com/in/nehant-fopse-147082324', icon: linkedinimage },
+    { id: 3, label: 'Instagram', href: 'https://www.instagram.com/nehant_sf', icon: instagramimage },
+    { id: 4, label: 'Email', href: 'mailto:nehantfopse@gmail.com', icon: emailimage },
 ]
 
 export default function Footer() {
