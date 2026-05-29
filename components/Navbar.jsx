@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import darkmodeimage from "../assets/night-mode.png" 
+
 
 export default function Navbar({ theme, onToggleTheme }) {
     const isLight = theme === 'light'
@@ -102,7 +104,7 @@ export default function Navbar({ theme, onToggleTheme }) {
                     aria-label="Toggle light and dark mode"
                 >
                     <img 
-                        src="/assets/night-mode.png" 
+                        src={darkmodeimage}
                         alt="Toggle Theme"
                         className={`w-4 h-4 object-contain transition-transform duration-500 ease-in-out ${
                             isLight ? 'rotate-180' : 'rotate-0'
