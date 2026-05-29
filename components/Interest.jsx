@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+// 1. Import your images (adjust the relative paths to match your folder structure)
+import coderSvg from '../assets/Coder.svg'; 
+import spotifyPng from '../assets/Spotify.png';
 
 function Interest() {
     return (
@@ -12,12 +15,12 @@ function Interest() {
                     rel="noopener noreferrer"
                     className="group block relative overflow-hidden rounded-md bg-black aspect-[4/3] w-full cursor-pointer"
                 >
+                    {/* 2. Use the imported variable here */}
                     <img 
-                        src="assets/Coder.svg" 
+                        src={coderSvg} 
                         alt="Interest One" 
                         className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
                     />
-                    {/* Dual gradient: subtle 35% opacity at the top, pure transparent middle, and a deeper 75% opacity at the bottom */}
                     <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/75 pointer-events-none" />
                 </a>
 
@@ -28,12 +31,12 @@ function Interest() {
                     rel="noopener noreferrer"
                     className="group block relative overflow-hidden rounded-md bg-black aspect-[4/3] w-full cursor-pointer"
                 >
+                    {/* 3. Use the imported variable here */}
                     <img 
-                        src="/assets/Spotify.png" 
+                        src={spotifyPng} 
                         alt="Interest Two" 
                         className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
                     />
-                    {/* Dual gradient: subtle 35% opacity at the top, pure transparent middle, and a deeper 75% opacity at the bottom */}
                     <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/75 pointer-events-none" />
                 </a>
 
