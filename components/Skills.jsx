@@ -30,6 +30,7 @@ export default function InterestsPhysics() {
         const height = containerRef.current.clientHeight
         const bottomOffset = 160 
         const t = 100 
+        const isMobile = window.innerWidth < 768
 
         const { Engine, Runner, Bodies, Composite, Mouse, MouseConstraint, Events } = Matter
 
@@ -66,15 +67,18 @@ export default function InterestsPhysics() {
         containerRef.current.removeEventListener("DOMMouseScroll", mouse.mousewheel)
         // ------------------------------------------------------------------------
 
-        const mouseConstraint = MouseConstraint.create(engine, {
-            mouse: mouse,
-            constraint: {
-                stiffness: 0.15,
-                render: { visible: false }
-            }
-        })
-        
-        Composite.add(world, mouseConstraint)
+        // Only enable MouseConstraint on desktop to allow mobile page scrolling
+        if (!isMobile) {
+            const mouseConstraint = MouseConstraint.create(engine, {
+                mouse: mouse,
+                constraint: {
+                    stiffness: 0.15,
+                    render: { visible: false }
+                }
+            })
+            
+            Composite.add(world, mouseConstraint)
+        }
 
         const runner = Runner.create()
         Runner.run(runner, engine)
@@ -109,7 +113,7 @@ export default function InterestsPhysics() {
     }, [])
 
     return (
-        <div ref={containerRef} className="absolute inset-0 w-full h-full overflow-hidden select-none z-20 pointer-events-auto">
+        <div ref={containerRef} className="absolute inset-0 w-full h-full overflow-hidden select-none z-20 md:pointer-events-auto pointer-events-none" style={{ touchAction: 'pan-y' }}>
             {SKILLS.map((skill) => {
                 const pos = positions.find((p) => p.id === skill.id)
                 if (!pos) return null
@@ -117,7 +121,7 @@ export default function InterestsPhysics() {
                 return (
                     <div
                         key={skill.id}
-                        className="absolute flex items-center justify-center gap-3 bg-white text-black border-2 border-neutral-300 rounded-full px-8 text-base md:text-xl font-extrabold font-mono uppercase tracking-wide cursor-grab active:cursor-grabbing shadow-xl transform origin-center will-change-transform"
+                        className="absolute flex items-center justify-center gap-3 bg-white text-black border-2 border-neutral-300 rounded-full px-8 text-base md:text-xl font-extrabold font-mono uppercase tracking-wide cursor-grab active:cursor-grabbing shadow-xl transform origin-center will-change-transform md:pointer-events-auto pointer-events-none"
                         style={{
                             width: skill.w,
                             height: skill.h,
