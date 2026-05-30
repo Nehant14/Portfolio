@@ -23,10 +23,10 @@ const App = () => {
         <div className={`${isLight ? 'bg-slate-50 text-slate-950' : 'bg-black text-white'} min-h-screen transition-colors duration-300`}>
 
             {/* Section 1: Hero view containing Navbar, Dynamic Physics Box, and Centered Bottom Name */}
-            <div id="home" className="h-screen flex flex-col relative w-full">
+            <div id="home" className="h-[100dvh] md:h-screen flex flex-col relative w-full">
                 <Navbar theme={theme} onToggleTheme={toggleTheme} />
                 
-                <div className="flex-1 w-full relative overflow-hidden">
+                <div className="flex-1 w-full relative overflow-hidden min-h-0">
                     <Skills />
                     
                     <CentralName />
