@@ -23,20 +23,15 @@ function Interest() {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/60 pointer-events-none" />
                 </div>
 
-                {/* Link 2 Wrapper */}
-                <a 
-                    href="#" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="group block relative overflow-hidden rounded-md bg-black aspect-[4/3] w-full cursor-pointer"
-                >
+                {/* Image Container (Link Removed) */}
+                <div className="relative overflow-hidden rounded-md bg-black aspect-[4/3] w-full">
                     <img 
                         src={spotifyPng} 
                         alt="Interest Two" 
-                        className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                        className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/75 pointer-events-none" />
-                </a>
+                </div>
 
             </div>
         </section>
