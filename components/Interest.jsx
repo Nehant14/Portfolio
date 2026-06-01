@@ -25,7 +25,7 @@ function Interest() {
 
                 {/* Link 2 Wrapper */}
                 <a 
-                    href="https://open.spotify.com/playlist/61vJZSiZCw0Yw5vFyuVKOX?si=f0dca6a0c3e84ad0" 
+                    href="#" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="group block relative overflow-hidden rounded-md bg-black aspect-[4/3] w-full cursor-pointer"
