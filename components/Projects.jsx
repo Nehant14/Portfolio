@@ -1,6 +1,8 @@
 import React from 'react'
 import Project1Image from '../assets/Project1.png'
-import Project2Image from '../assets/Project2.jpg'
+import Project2Image from '../assets/Project2.png'
+import Project3Image from '../assets/Project3.png'
+import Project4Image from '../assets/Project4.jpg'
 
 const PROJECT_DATA = [
     {
@@ -13,12 +15,31 @@ const PROJECT_DATA = [
     },
     {
         id: 2,
-        href: 'https://github.com/Nehant14/Lexgent',
+        href: 'https://github.com/Nehant14/Sourced',
         img: Project2Image,
+        alt: 'Sourced project screenshot',
+        title: 'Sourced',
+        description: 'A Research Assistant'
+    },
+    {
+        id: 3,
+        href: 'https://github.com/Nehant14/Retained',
+        img: Project3Image,
+        alt: 'Retained project screenshot',
+        title: 'Retained',
+        description: 'Never lose a LeetCode solution again',
+        bgColor: '#f4f3ee',
+        imgClass: 'object-contain p-6'
+    },
+    {
+        id: 4,
+        href: 'https://github.com/Nehant14/Lexgent',
+        img: Project4Image,
         alt: 'Lexgent project screenshot',
         title: 'Lexgent',
         description: 'Automating legal drafting between parties.'
     }
+
 ]
 
 export default function Projects() {
@@ -41,12 +62,13 @@ export default function Projects() {
                             href={project.href} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="group block overflow-hidden rounded-md bg-zinc-900 aspect-[4/3] w-full shadow-2xl cursor-pointer"
+                            className={`group block overflow-hidden rounded-md ${project.bgColor ? '' : 'bg-zinc-900'} aspect-[4/3] w-full shadow-2xl cursor-pointer`}
+                            style={project.bgColor ? { backgroundColor: project.bgColor } : undefined}
                         >
                             <img 
                                 src={project.img} 
                                 alt={project.alt} 
-                                className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                                className={`w-full h-full ${project.imgClass ?? 'object-cover'} group-hover:scale-[1.02] transition-transform duration-500 ease-out`}
                             />
                         </a>
 
