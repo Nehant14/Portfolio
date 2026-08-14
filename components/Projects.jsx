@@ -29,7 +29,7 @@ const PROJECT_DATA = [
         title: 'Retained',
         description: 'Never lose a LeetCode solution again',
         bgColor: '#f4f3ee',
-        imgClass: 'object-contain p-6'
+        imgClass: 'object-cover transform scale-100 group-hover:scale-115'
     },
     {
         id: 4,
@@ -68,7 +68,7 @@ export default function Projects() {
                             <img 
                                 src={project.img} 
                                 alt={project.alt} 
-                                className={`w-full h-full ${project.imgClass ?? 'object-cover'} group-hover:scale-[1.02] transition-transform duration-500 ease-out`}
+                                className={`w-full h-full group-hover:scale-[1.02] transition-transform duration-500 ease-out ${project.imgClass ?? 'object-cover'}`}
                             />
                         </a>
 
