@@ -2,7 +2,7 @@ import React from 'react'
 import Project1Image from '../assets/Project1.png'
 import Project2Image from '../assets/Project2.png'
 import Project3Image from '../assets/Project3.png'
-import Project4Image from '../assets/Project4.jpg'
+import Project4Image from '../assets/Project4.png'
 
 const PROJECT_DATA = [
     {
@@ -33,11 +33,11 @@ const PROJECT_DATA = [
     },
     {
         id: 4,
-        href: 'https://github.com/Nehant14/Lexgent',
+        href: 'https://github.com/Nehant14/SnapLink',
         img: Project4Image,
-        alt: 'Lexgent project screenshot',
-        title: 'Lexgent',
-        description: 'Automating legal drafting between parties.'
+        alt: 'SnapLink project screenshot',
+        title: 'SnapLink',
+        description: 'A distributed URL Shortener.'
     }
 
 ]
