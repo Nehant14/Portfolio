@@ -28,7 +28,6 @@ const PROJECT_DATA = [
         alt: 'Retained project screenshot',
         title: 'Retained',
         description: 'Never lose a LeetCode solution again',
-        bgColor: '#f4f3ee',
         imgClass: 'object-cover transform scale-100 group-hover:scale-115'
     },
     {
