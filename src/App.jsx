@@ -6,6 +6,7 @@ import AboutMe from '../components/AboutMe.jsx'
 import Projects from '../components/Projects.jsx' 
 import Footer from '../components/Footer.jsx' 
 import Interest from '../components/Interest.jsx'
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
     const [theme, setTheme] = useState('dark')
@@ -37,6 +38,8 @@ const App = () => {
             <AboutMe/>
 
             <Projects />
+
+            <Analytics />
 
             <Footer />
 
